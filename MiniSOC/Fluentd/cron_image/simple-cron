@@ -1,4 +1,3 @@
-0 1 * * * root bash /script/script.sh >> /var/log/cron.log
 0 1 * * * root bash /script/daily.sh >> /var/log/cron.log
 0 1 1 * * root bash /script/monthly.sh >> /var/log/cron.log
 @reboot root bash /script/daily.sh >> /var/log/cron.log

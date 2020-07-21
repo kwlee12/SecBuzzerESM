@@ -1,4 +1,8 @@
 # Release History
+## V0.2.1
+- 將 WEB 需要的 API KEY 加入到 MiniSOC.env
+- 移除 POC 用不到的檔案 (Fluentd cron 備份 raw log)
+- 
 ## V0.2.0
 - 調整 sucicata, 不會輸出 fast.log, suricata.log
 - 移除 POC 用不到的檔案
