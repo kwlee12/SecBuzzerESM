@@ -14,6 +14,6 @@ services:
       - ./client_application.properties:/usr/local/tomcat/webapps/client_application.properties
     environment:
       INTERFACE_NAME: $WEB_IF_NAME
-      KONG_AUTH_VALUE: $KONG_AUTH_VALUE
+      API_KEY_VALUE: $API_KEY_VALUE
       ORG_3_CODE: $ORG_3_CODE
     network_mode: host
