@@ -1,0 +1,61 @@
+version: '3.1'
+
+services:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 28080:8080
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pjbFEUj24X3
+      MYSQL_DATABASE: AI
+      MYSQL_USER: AI
+      MYSQL_PASSWORD: de7xGdeKNkH
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+    volumes:
+      - db-storage:/var/lib/mysql
+
+  PacketAnalyze:
+    image: csti/pa_python:v1
+    build: 
+      context: "./Packet_analyze/"
+      dockerfile: "Dockerfile"
+    restart: always
+    network_mode: "host"
+    environment:
+      - INTERFACE_NAME=ens19
+      - ELASTICSEARCH_HOST=192.168.70.174
+      - ELASTICSEARCH_PORT=19200
+      - ELASTICSEARCH_INDEX=king_test
+      - ELASTICSEARCH_DATA_TYPE=test
+      - ETHER_ENABLE=TRUE
+      - IP_ENABLE=TRUE
+      - TCP_ENABLE=TRUE
+      - UDP_ENABLE=TRUE
+      - IPV6_ENABLE=TRUE
+      - HTTP_ENABLE=TRUE
+    # command: "ping 127.0.0.1"  #debug
+
+  OMP:
+    image: csti/omp:v1
+    build:
+      context: "./OMP/"
+      dockerfile: "Dockerfile"
+    restart: always
+    volumes:
+    - "./OMP/code/:/usr/src/omp/code/"
+    - "./OMP/data/:/usr/src/omp/code/data/"
+
+
+
+volumes:
+  db-storage:
+    driver: local
+
+
+# TODO: container 要連到 ES

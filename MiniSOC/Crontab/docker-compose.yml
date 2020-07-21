@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  cron:
+    image: csti/cron:Crontab
+    build:
+      context: "./docker_image/"
+      dockerfile: "Dockerfile"
+    volumes:
+      - "$FLUENTD_LOG_PATH:/fluentd_log"
+      - "$ES_VOLUME_PATH:/es_volume"
+      - "/usr/share/zoneinfo/ROC:/etc/localtime:ro"
+      - "./scripts:/scripts:ro"
+      - "/etc/hostname:/hostname:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    # command: tail -f /etc/hostname
+    network_mode: "host"

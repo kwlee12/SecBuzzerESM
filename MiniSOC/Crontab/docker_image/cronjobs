@@ -1,0 +1,2 @@
+@daily root /usr/bin/python3 /scripts/diskcheck.py >> /var/log/cron.log
+@reboot root /usr/bin/python3 /scripts/diskcheck.py >> /var/log/cron.log

@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  tomcat:
+    restart: always
+    container_name: client_tomcat
+    image: pistolpetewu/tomcat-web:1.0.3
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./ROOT.war:/usr/local/tomcat/webapps/ROOT.war
+      - ./location.properties:/usr/local/tomcat/webapps/location.properties
+      - ./client_application.properties:/usr/local/tomcat/webapps/client_application.properties
+      - ./rabbitstore:/usr/local/tomcat/webapps/rabbitstore
+      - ./client_key.p12:/usr/local/tomcat/webapps/client_key.p12
+    environment:
+      INTERFACE_NAME: $WEB_IF_NAME
+    network_mode: host

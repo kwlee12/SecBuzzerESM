@@ -1,0 +1,5 @@
+# SIDs range: 9000000-9999999 
+#
+# To verify whether Suricata is working or not.
+# Test syntax: curl HostIP:22/csti_verify_suricata
+alert tcp any any -> any 22 (msg:"===== CSTI SURICATA VERIFICATION ====="; content:"csti_verify_suricata"; sid:9000001;)
