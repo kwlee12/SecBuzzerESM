@@ -1,4 +1,7 @@
 # Release History
+## V0.2.2
+- 更新 Top Suricata Rules (20200721)
+
 ## V0.2.1
 - 將 WEB 需要的 API KEY 加入到 MiniSOC.env
 - 移除 POC 用不到的檔案 (Fluentd cron 備份 raw log)

@@ -1,1 +1,0 @@
-suricata_reduction.rules：由suricata default的規則reduction而來

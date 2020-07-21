@@ -1814,11 +1814,53 @@ napatech:
 
 default-rule-path: /var/lib/suricata/rules
 rule-files:
-# - suricata.rules
- - csti_pick.rules
- - csti_waf.rules
- - csti_verify.rules
-# - av_pro.rules
+ - botcc.portgrouped.rules
+ - ciarmy.rules
+ - cobaltstrike.rules
+ - compromised.rules
+ - crypto-Miners_public_pools.rules
+ - CVE-2008-4250.rules
+ - CVE-2014-6271.rules
+ - CVE-2017-0144.rules
+ - CVE-2017-5638.rules
+ - CVE-2017-7269.rules
+ - CVE-2017-7494.rules
+ - cve-2018-0886.rules
+ - cve-2018-7445.rules
+ - cve-2018-7600.rules
+ - cve-2018-7602.rules
+ - cve-2019-0232.rules
+ - cve-2019-0708.rules
+ - cve-2019-6340.rules
+ - cve-2020-0601.rules
+ - cve-2020-0796.rules
+ - cve-2020-1350.rules
+ - dcshadow.rules
+ - dns_rebinding.rules
+ - dnstunnel.rules
+ - dridex.rules
+ - dshield.rules
+ - empire.rules
+ - EquationGroup.rules
+ - eternalblue(WannaCry,Petya).rules
+ - icmp_tunnel.rules
+ - Maliciousbehavior.rules
+ - metasploit.rules
+ - Mining_Behavior_Detection.rules
+ - ms17-010.rules
+ - neutrino.rules
+ - power_shell_empire.rules
+ - ransom.rules
+ - rce.rules
+ - redis_replication_rce.rules
+ - silenttrinity.rules
+ - spamhaus.rules
+ - suspicious.rules
+ - tor.rules
+ - wannamine.rules
+ - wCry-Ransomware.rules
+ - webshell.rules
+ - weevely.rules
 
 classification-file: /etc/suricata/rules/classification.config
 reference-config-file: /etc/suricata/reference.config
