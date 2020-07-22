@@ -1,4 +1,7 @@
 # Release History
+## V0.2.4
+- 將 MiniSOC 改為 SecBuzzerESM
+
 ## V0.2.3
 - 修改 Suricata docker-compose.yml, 修正 Build 後讀不到網卡
 
