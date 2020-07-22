@@ -14,7 +14,7 @@ services:
      - NET_ADMIN
      - SYS_NICE
      - NET_RAW
-    image: "dtagdevsec/suricata:1903"
+    image: "csti/suricata:v1"
     volumes:
       - $SURICATA_LOG_PATH:/var/log/suricata
       - ./suricata/rules:/var/lib/suricata/rules

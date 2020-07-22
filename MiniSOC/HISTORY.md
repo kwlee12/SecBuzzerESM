@@ -1,4 +1,7 @@
 # Release History
+## V0.2.3
+- 修改 Suricata docker-compose.yml, 修正 Build 後讀不到網卡
+
 ## V0.2.2
 - 更新 Top Suricata Rules (20200721)
 
