@@ -1,4 +1,7 @@
 # Release History
+## V0.2.6
+- 修正 Top Suricata Rules 因檔案名稱相同覆蓋狀況
+
 ## V0.2.5
 - 修改 Suricata 設定檔, 避免 Windows 無法存取 Log
 - 將 Suricata Image 上傳到 Docker hub

@@ -1823,7 +1823,8 @@ rule-files:
  - CVE-2014-6271.rules
  - CVE-2017-0144.rules
  - CVE-2017-5638.rules
- - CVE-2017-7269.rules
+ - CVE-2017-7269_1.rules
+ - CVE-2017-7269_2.rules
  - CVE-2017-7494.rules
  - cve-2018-0886.rules
  - cve-2018-7445.rules
