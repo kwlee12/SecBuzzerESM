@@ -1,4 +1,8 @@
 # Release History
+## V0.2.8
+- 修正 Fluentd 沒將規則送到 ES
+- 修正 Cron 腳本不會自動重啟
+
 ## V0.2.7
 - 新增離線安裝腳本 & 打包腳本
 

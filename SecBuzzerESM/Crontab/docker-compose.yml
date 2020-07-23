@@ -15,3 +15,4 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     # command: tail -f /etc/hostname
     network_mode: "host"
+    restart: always

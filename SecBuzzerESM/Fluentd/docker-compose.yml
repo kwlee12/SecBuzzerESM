@@ -32,3 +32,4 @@ services:
             - "./cron_image/daily.sh:/script/daily.sh"
             - "./cron_image/monthly.sh:/script/monthly.sh"
         network_mode: "host"
+        restart: always
