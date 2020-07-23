@@ -1,4 +1,7 @@
 # Release History
+## V0.2.7
+- 新增離線安裝腳本 & 打包腳本
+
 ## V0.2.6
 - 修正 Top Suricata Rules 因檔案名稱相同覆蓋狀況
 
