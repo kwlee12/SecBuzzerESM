@@ -1,4 +1,8 @@
 # Release History
+## V0.2.5
+- 修改 Suricata 設定檔, 避免 Windows 無法存取 Log
+- 將 Suricata Image 上傳到 Docker hub
+
 ## V0.2.4
 - 將 MiniSOC 改為 SecBuzzerESM
 
