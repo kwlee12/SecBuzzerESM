@@ -3,7 +3,6 @@ version: '2'
 services:
   suricata:
     image: "cstichenghanlin/secbuzzer-suricata:latest"
-    build: suricata
     container_name: suricata
     restart: always
     environment:
