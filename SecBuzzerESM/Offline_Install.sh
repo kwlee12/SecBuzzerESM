@@ -38,7 +38,7 @@ root hard nofile 655360
 
 ln -s ../SecBuzzerESM.env ES/.env 2>/dev/nul
 ln -s ../SecBuzzerESM.env Fluentd/.env 2>/dev/nul
-ln -s ../SecBuzzerESM.env suricata/.env 2>/dev/nul
+ln -s ../SecBuzzerESM.env Suricata/.env 2>/dev/nul
 ln -s ../SecBuzzerESM.env Crontab/.env 2>/dev/nul
 ln -s ../SecBuzzerESM.env WEB/.env 2>/dev/nul
 

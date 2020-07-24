@@ -1,4 +1,7 @@
 # Release History
+## V0.2.9
+- 修正 Suricata 讀取不到網卡
+
 ## V0.2.8
 - 修正 Fluentd 沒將規則送到 ES
 - 修正 Cron 腳本不會自動重啟
