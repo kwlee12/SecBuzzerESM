@@ -1,4 +1,7 @@
 # Release History
+## V0.2.10
+- 修改 eve.json rotate 的區間
+ 
 ## V0.2.9
 - 修正 Suricata 讀取不到網卡
 
