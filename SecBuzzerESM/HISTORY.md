@@ -1,4 +1,7 @@
 # Release History
+## V0.2.11
+- 上傳初版 Suricata 更新腳本
+
 ## V0.2.10
 - 修改 eve.json rotate 的區間
  
