@@ -1,4 +1,7 @@
 # Release History
+## V0.2.12
+- Suricata 資料新增 dump_status 欄位
+
 ## V0.2.11
 - 上傳初版 Suricata 更新腳本
 
