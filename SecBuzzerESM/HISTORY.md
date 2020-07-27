@@ -1,4 +1,7 @@
 # Release History
+## V0.2.13
+- 修正 Update_Suricata_rules.sh 檔案路徑
+
 ## V0.2.12
 - Suricata 資料新增 dump_status 欄位
 
