@@ -1,4 +1,7 @@
 # Release History
+## V0.2.14
+- 修正 Suricata rules 檔重複 sid
+
 ## V0.2.13
 - 修正 Update_Suricata_rules.sh 檔案路徑
 
