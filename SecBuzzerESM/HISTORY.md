@@ -1,4 +1,7 @@
 # Release History
+## V0.2.16
+- 調整 Update_Suricata_rules.sh 檔案路徑
+
 ## V0.2.15
 - Suricata 資料新增 ticket 欄位
 
