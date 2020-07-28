@@ -1,4 +1,7 @@
 # Release History
+## V0.2.15
+- Suricata 資料新增 ticket 欄位
+
 ## V0.2.14
 - 修正 Suricata rules 檔重複 sid
 
