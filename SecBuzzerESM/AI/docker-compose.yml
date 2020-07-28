@@ -1,4 +1,4 @@
-version: '3.1'
+PacketAnalyzeversion: '3.1'
 
 services:
   adminer:
@@ -21,25 +21,13 @@ services:
       - db-storage:/var/lib/mysql
 
   PacketAnalyze:
-    image: csti/pa_python:v1
-    build: 
-      context: "./Packet_analyze/"
-      dockerfile: "Dockerfile"
+    image: openjdk:16-jdk-alpine
     restart: always
     network_mode: "host"
-    environment:
-      - INTERFACE_NAME=ens19
-      - ELASTICSEARCH_HOST=192.168.70.174
-      - ELASTICSEARCH_PORT=19200
-      - ELASTICSEARCH_INDEX=king_test
-      - ELASTICSEARCH_DATA_TYPE=test
-      - ETHER_ENABLE=TRUE
-      - IP_ENABLE=TRUE
-      - TCP_ENABLE=TRUE
-      - UDP_ENABLE=TRUE
-      - IPV6_ENABLE=TRUE
-      - HTTP_ENABLE=TRUE
-    # command: "ping 127.0.0.1"  #debug
+    volumes:
+      - ./PacketAnalyze/CICFlowMeter.jar:/CICFlowMeter.jar
+      - ./PacketAnalyze/libjnetpcap.so:/opt/openjdk-16/lib/libjnetpcap.so
+    command: "java -jar /CICFlowMeter.jar"
 
   OMP:
     image: csti/omp:v1
