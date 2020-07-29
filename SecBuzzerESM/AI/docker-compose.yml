@@ -21,7 +21,7 @@ services:
       - db-storage:/var/lib/mysql
 
   PacketAnalyze:
-    image: openjdk:11-jdk-alpine
+    image: openjdk:11.0.8-jre
     restart: always
     network_mode: "host"
     volumes:
