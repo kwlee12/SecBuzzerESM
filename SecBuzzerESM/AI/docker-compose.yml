@@ -26,7 +26,7 @@ services:
     network_mode: "host"
     volumes:
       - ./PacketAnalyze/CICFlowMeter.jar:/CICFlowMeter.jar
-      - ./PacketAnalyze/libjnetpcap.so:/opt/openjdk-16/lib/libjnetpcap.so
+      - ./PacketAnalyze/libjnetpcap.so:/usr/local/openjdk-11/lib/libjnetpcap.so
     command: "java -jar /CICFlowMeter.jar"
 
   OMP:
