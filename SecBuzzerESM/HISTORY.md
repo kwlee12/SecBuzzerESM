@@ -1,4 +1,7 @@
 # Release History
+## V0.2.17
+- 修正suricata.yaml檔 - eve檔案輸出格式錯誤
+
 ## V0.2.16
 - 調整 Update_Suricata_rules.sh 檔案路徑
 

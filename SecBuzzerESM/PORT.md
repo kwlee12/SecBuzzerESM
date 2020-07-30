@@ -1,4 +1,4 @@
-# MiniSOC 
+# SecBuzzerESM 
 
 |Service|Port|Expose Port|
 |---|---|---|
