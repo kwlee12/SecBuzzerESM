@@ -8,7 +8,7 @@ services:
         restart: always
         
     elasticsearch:
-        image: docker.elastic.co/elasticsearch/elasticsearch:6.8.5
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
         container_name: elasticsearch
         environment:
             - cluster.name=docker-cluster
@@ -49,7 +49,7 @@ services:
             retries: 5
 
     elasticsearch1:
-        image: docker.elastic.co/elasticsearch/elasticsearch:6.8.5
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
         container_name: elasticsearch1
         environment:
             - cluster.name=docker-cluster
@@ -87,7 +87,7 @@ services:
             retries: 5
 
     elasticsearch2:
-        image: docker.elastic.co/elasticsearch/elasticsearch:6.8.5
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
         container_name: elasticsearch2
         environment:
             - cluster.name=docker-cluster
