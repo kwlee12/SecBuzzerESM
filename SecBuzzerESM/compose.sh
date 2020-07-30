@@ -9,6 +9,6 @@ fi
 
 docker-compose --env-file SecBuzzerESM.env -f ES/docker-compose.yml $cmd
 docker-compose --env-file SecBuzzerESM.env -f Fluentd/docker-compose.yml $cmd
-docker-compose --env-file SecBuzzerESM.env -f WEB/docker-compose.yml $cmd
 docker-compose --env-file SecBuzzerESM.env -f Suricata/docker-compose.yml $cmd
 docker-compose --env-file SecBuzzerESM.env -f Crontab/docker-compose.yml $cmd
+docker-compose --env-file SecBuzzerESM.env -f WEB/docker-compose.yml $cmd
