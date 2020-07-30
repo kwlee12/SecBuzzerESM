@@ -24,9 +24,18 @@ services:
     image: openjdk:11.0.8-jre
     restart: always
     network_mode: "host"
+    tty: true
     volumes:
       - ./PacketAnalyze/CICFlowMeter.jar:/CICFlowMeter.jar
       - ./PacketAnalyze/libjnetpcap.so:/usr/local/openjdk-11/lib/libjnetpcap.so
+      - ./PacketAnalyze/libpcap.so.1.9.1:/usr/local/openjdk-11/lib/libpcap.so.0.8
+    environment:
+      ES_IP: localhost
+      ES_PORT: 9200
+      ES_INDEX_PREFIX: cic_
+      READ_LOCAL_FILE: FALSE
+      NETWORK_INTERFACE: 6
+      WRITE_TO_CSV: FALSE
     command: "java -jar /CICFlowMeter.jar"
 
   OMP:
