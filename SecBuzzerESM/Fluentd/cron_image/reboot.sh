@@ -30,7 +30,7 @@ curl -X PUT "localhost:19200/_ilm/policy/test_policy?pretty" -H 'Content-Type: a
 }
 '
 
-#Cteate today template
+#Create today template
 curl -X PUT "localhost:19200/_template/lm-$createDay?pretty" -H 'Content-Type: application/json' -d'
 {
         "index_patterns": ["lm-'$createDay'-*"],
@@ -44,7 +44,7 @@ curl -X PUT "localhost:19200/_template/lm-$createDay?pretty" -H 'Content-Type: a
 }
 '
 
-#Cteate today index
+#Create today index
 curl -X PUT "localhost:19200/lm-$createDay-000001?pretty" -H 'Content-Type: application/json' -d'
 {
   "aliases": {
@@ -55,7 +55,7 @@ curl -X PUT "localhost:19200/lm-$createDay-000001?pretty" -H 'Content-Type: appl
 }
 '
 
-#Cteate template
+#Create template
 curl -X PUT "localhost:19200/_template/suricata-$createMonth?pretty" -H 'Content-Type: application/json' -d'
 {
         "index_patterns": ["suricata-'$createMonth'-*"],
@@ -69,7 +69,7 @@ curl -X PUT "localhost:19200/_template/suricata-$createMonth?pretty" -H 'Content
 }
 '
 
-#Cteate index
+#Create index
 curl -X PUT "localhost:19200/suricata-$createMonth-000001?pretty" -H 'Content-Type: application/json' -d'
 {
   "aliases": {
@@ -79,3 +79,16 @@ curl -X PUT "localhost:19200/suricata-$createMonth-000001?pretty" -H 'Content-Ty
   }
 }
 '
+#Create pipline
+curl -X PUT "localhost:19200/_ingest/pipeline/my_timestamp_pipeline?pretty" -H 'Content-Type: application/json' -d'
+{
+  "description": "Adds a field to a document with the time of ingestion",
+  "processors": [
+    {
+      "set": {
+        "field": "ingest_timestamp",
+        "value": "{{_ingest.timestamp}}"
+      }
+    }
+  ]
+}'
