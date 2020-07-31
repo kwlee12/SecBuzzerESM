@@ -1,4 +1,7 @@
 # Release History
+## V0.2.18
+- 新增 Suricata 資料打入 ES 時間欄位
+
 ## V0.2.17
 - 修正suricata.yaml檔 - eve檔案輸出格式錯誤
 
