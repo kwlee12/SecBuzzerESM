@@ -1,4 +1,7 @@
 # Release History
+## V0.2.19
+- 新增 PacketAnalyze 模組
+
 ## V0.2.18
 - 新增 Suricata 資料打入 ES 時間欄位
 
