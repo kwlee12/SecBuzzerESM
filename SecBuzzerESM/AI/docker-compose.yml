@@ -48,6 +48,13 @@ services:
     - "./OMP/code/:/usr/src/omp/code/"
     - "./OMP/data/:/usr/src/omp/code/data/"
 
+  Winlog:
+    image: csti/Winlog:v1
+    build:
+      context: "./Winlog/"
+      dockerfile: "Dockerfile"
+    container_name: Winlog
+    restart: always
 
 
 volumes:
