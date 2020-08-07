@@ -1,4 +1,7 @@
 # Release History
+## V0.2.22
+- 修正 AI docker-compose 各式錯誤
+
 ## V0.2.21
 - 將 Winlog 觸發時間改為一小時一次
 - 關閉 OMP module 
