@@ -1,4 +1,9 @@
 # Release History
+## V0.2.20
+- 新增 Winlog 模組
+- 新增 Cronjob 定時觸發 Winlog 模組
+- 新增自動移除 eve.json
+
 ## V0.2.19
 - 新增 PacketAnalyze 模組
 

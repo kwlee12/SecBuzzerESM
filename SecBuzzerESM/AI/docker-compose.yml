@@ -49,11 +49,13 @@ services:
     - "./OMP/data/:/usr/src/omp/code/data/"
 
   Winlog:
-    image: csti/Winlog:v1
+    image: csti/winlog:v1
     build:
       context: "./Winlog/"
       dockerfile: "Dockerfile"
-    container_name: Winlog
+    container_name: winlog
+    ports:
+      - 5000:15000
     restart: always
 
 
