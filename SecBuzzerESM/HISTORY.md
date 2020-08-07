@@ -1,4 +1,10 @@
 # Release History
+## V0.2.21
+- 將 Winlog 觸發時間改為一小時一次
+- 關閉 OMP module 
+- 關閉 AI 用 mysql & 管理工具
+- 增加 compose.sh 啟動 AI module
+
 ## V0.2.20
 - 新增 Winlog 模組
 - 新增 Cronjob 定時觸發 Winlog 模組

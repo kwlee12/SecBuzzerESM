@@ -1,24 +1,24 @@
 version: '3.1'
 
-services:
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 28080:8080
+# services:
+#   adminer:
+#     image: adminer
+#     restart: always
+#     ports:
+#       - 28080:8080
 
-  db:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: pjbFEUj24X3
-      MYSQL_DATABASE: AI
-      MYSQL_USER: AI
-      MYSQL_PASSWORD: de7xGdeKNkH
-    healthcheck:
-      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
-    volumes:
-      - db-storage:/var/lib/mysql
+#   db:
+#     image: mysql:5.7
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: pjbFEUj24X3
+#       MYSQL_DATABASE: AI
+#       MYSQL_USER: AI
+#       MYSQL_PASSWORD: de7xGdeKNkH
+#     healthcheck:
+#       test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+#     volumes:
+#       - db-storage:/var/lib/mysql
 
   PacketAnalyze:
     image: openjdk:11.0.8-jre
@@ -38,15 +38,15 @@ services:
       - "WRITE_TO_CSV=FALSE"
     command: "java -jar /CICFlowMeter.jar"
 
-  OMP:
-    image: csti/omp:v1
-    build:
-      context: "./OMP/"
-      dockerfile: "Dockerfile"
-    restart: always
-    volumes:
-    - "./OMP/code/:/usr/src/omp/code/"
-    - "./OMP/data/:/usr/src/omp/code/data/"
+  # OMP:
+  #   image: csti/omp:v1
+  #   build:
+  #     context: "./OMP/"
+  #     dockerfile: "Dockerfile"
+  #   restart: always
+  #   volumes:
+  #   - "./OMP/code/:/usr/src/omp/code/"
+  #   - "./OMP/data/:/usr/src/omp/code/data/"
 
   Winlog:
     image: csti/winlog:v1
@@ -54,8 +54,7 @@ services:
       context: "./Winlog/"
       dockerfile: "Dockerfile"
     container_name: winlog
-    ports:
-      - 5000:15000
+    network_mode: "host"
     restart: always
 
 
